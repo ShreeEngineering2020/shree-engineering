@@ -7,24 +7,8 @@
 <title>Shree Engineering | Precision CNC Lathe Manufacturer India</title>
 
 <meta name="description" content="Shree Engineering manufactures high-precision CNC lathe machines engineered for structural rigidity, industrial reliability and global manufacturing integration.">
-<meta name="keywords" content="CNC Lathe Machine Manufacturer India, Precision CNC Machine, Industrial CNC Systems, Shree Engineering">
-<meta name="author" content="Shree Engineering">
 
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
-
-<!-- Structured Data -->
-<script type="application/ld+json">
-{
- "@context": "https://schema.org",
- "@type": "Product",
- "name": "Precision CNC Lathe Machine",
- "image": "https://shreeengineering2020.github.io/shree-engineering/precision-machine.jpeg",
- "brand": {
-   "@type": "Brand",
-   "name": "Shree Engineering"
- }
-}
-</script>
 
 <style>
 html{scroll-behavior:smooth;}
@@ -37,7 +21,7 @@ body{
     overflow-x:hidden;
 }
 
-/* Background Blueprint Grid */
+/* Background Blueprint */
 body::before{
     content:"";
     position:fixed;
@@ -50,12 +34,12 @@ body::before{
     animation:gridMove 35s linear infinite;
     z-index:-2;
 }
-
 @keyframes gridMove{
     from{transform:translateY(0);}
     to{transform:translateY(70px);}
 }
 
+/* Hero */
 .hero{
     height:90vh;
     display:flex;
@@ -64,7 +48,6 @@ body::before{
     text-align:center;
     background:linear-gradient(to right,#0f172a,#1e293b);
 }
-
 .hero h1{
     font-size:58px;
     font-weight:800;
@@ -73,56 +56,46 @@ body::before{
     -webkit-background-clip:text;
     -webkit-text-fill-color:transparent;
 }
-
 .hero p{
     margin-top:25px;
     font-size:20px;
     color:#cbd5e1;
 }
 
+/* Sections */
 .section{
     padding:120px 20px;
     max-width:1100px;
     margin:auto;
 }
-
 h2{
     font-size:36px;
     margin-bottom:40px;
     border-left:6px solid #00c3ff;
     padding-left:15px;
 }
-
 p{
     line-height:1.9;
     color:#cbd5e1;
 }
 
 /* Machine */
-.machine{
-    text-align:center;
-    position:relative;
-}
-
+.machine{text-align:center;position:relative;}
 .machine img.main-machine{
     width:35%;
     border-radius:18px;
     transition:0.5s;
 }
-
 .machine img.main-machine:hover{
     transform:rotateY(6deg) scale(1.05);
 }
-
 .nameplate{
     position:absolute;
     right:5%;
     bottom:-40px;
 }
-
 .nameplate img{
     width:120px;
-    opacity:0.9;
 }
 
 /* Grid */
@@ -131,7 +104,6 @@ p{
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
     gap:30px;
 }
-
 .card{
     background:#0f172a;
     padding:30px;
@@ -139,17 +111,15 @@ p{
     border:1px solid rgba(0,150,255,0.2);
 }
 
-/* Form Section */
+/* Form */
 .form-section{
     background:#0f172a;
     padding:120px 20px;
 }
-
 form{
     max-width:700px;
     margin:auto;
 }
-
 input, textarea{
     width:100%;
     padding:15px;
@@ -158,7 +128,6 @@ input, textarea{
     border:none;
     font-family:'Montserrat';
 }
-
 button{
     padding:15px 40px;
     background:#f59e0b;
@@ -168,10 +137,33 @@ button{
     cursor:pointer;
     transition:0.3s;
 }
-
 button:hover{
     background:#00c3ff;
     color:#000;
+}
+
+/* Thank You Popup */
+#thankYouPopup{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.8);
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+}
+.popup-content{
+    background:#111827;
+    padding:40px;
+    border-radius:12px;
+    text-align:center;
+}
+.popup-content h3{
+    margin-bottom:15px;
+    color:#00c3ff;
 }
 
 /* Contact */
@@ -180,14 +172,12 @@ button:hover{
     padding:120px 20px;
     text-align:center;
 }
-
 .contact a{
     color:#f59e0b;
     font-size:20px;
     text-decoration:none;
     font-weight:600;
 }
-
 footer{
     padding:50px;
     text-align:center;
@@ -210,19 +200,19 @@ footer{
 <h2>Precision CNC Lathe Machine</h2>
 
 <img src="precision-machine.jpeg"
-     alt="Precision CNC Lathe Machine by Shree Engineering India"
+     alt="Precision CNC Lathe Machine"
      class="main-machine"
      loading="lazy">
 
 <div class="nameplate">
 <img src="machine-nameplate.jpeg"
-     alt="CNC Machine Nameplate - Shree Engineering"
+     alt="CNC Machine Nameplate"
      loading="lazy">
 </div>
 
 <p>
 Our precision CNC lathe systems are engineered for structural rigidity,
-vibration stability, dimensional accuracy and long-term industrial reliability.
+vibration stability and industrial reliability.
 </p>
 </section>
 
@@ -238,14 +228,17 @@ vibration stability, dimensional accuracy and long-term industrial reliability.
 </div>
 </section>
 
-<!-- FEEDBACK / ENQUIRY FORM -->
+<!-- FORM -->
 <section class="form-section">
 <h2 style="text-align:center;">Send Your Enquiry / Feedback</h2>
 
-<form action="https://formsubmit.co/shreeengineering2020@gmail.com" method="POST">
+<form id="enquiryForm"
+action="https://formsubmit.co/shreeengineering2020@gmail.com"
+method="POST">
 
 <input type="hidden" name="_captcha" value="false">
-<input type="hidden" name="_subject" value="New Enquiry - Shree Engineering Website">
+<input type="hidden" name="_subject" value="New Enquiry - Shree Engineering">
+<input type="hidden" name="_next" value="https://shreeengineering2020.github.io/shree-engineering/?submitted=true">
 
 <input type="text" name="name" placeholder="Your Name" required>
 <input type="email" name="email" placeholder="Your Email" required>
@@ -270,8 +263,27 @@ shreeengineering2020@gmail.com
 © Shree Engineering | Precision CNC Lathe Manufacturer | Industrial Solutions India
 </footer>
 
+<!-- THANK YOU POPUP -->
+<div id="thankYouPopup">
+  <div class="popup-content">
+    <h3>Thank You!</h3>
+    <p>Your enquiry has been successfully submitted.</p>
+  </div>
+</div>
+
+<script>
+// Show popup after redirect
+if(window.location.search.includes("submitted=true")){
+    document.getElementById("thankYouPopup").style.display="flex";
+    setTimeout(function(){
+        window.location.href="https://shreeengineering2020.github.io/shree-engineering/";
+    },3000);
+}
+</script>
+
 </body>
 </html>
+
 
 
 
