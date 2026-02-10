@@ -22,12 +22,12 @@ html { scroll-behavior: smooth; }
 body{
     margin:0;
     font-family:'Montserrat',sans-serif;
-    background:#050b18;
+    background:#0b1120;
     color:#e5e7eb;
     overflow-x:hidden;
 }
 
-/* Animated Sci-Fi Grid Background */
+/* Futuristic Grid */
 body::before{
     content:"";
     position:fixed;
@@ -36,14 +36,14 @@ body::before{
     background:
         linear-gradient(rgba(0,150,255,0.05) 1px, transparent 1px),
         linear-gradient(90deg, rgba(0,150,255,0.05) 1px, transparent 1px);
-    background-size:40px 40px;
-    animation: moveGrid 20s linear infinite;
+    background-size:50px 50px;
+    animation: gridMove 25s linear infinite;
     z-index:-2;
 }
 
-@keyframes moveGrid {
-    from { transform: translateY(0); }
-    to { transform: translateY(40px); }
+@keyframes gridMove{
+    from{transform:translateY(0);}
+    to{transform:translateY(50px);}
 }
 
 /* Glow Layer */
@@ -52,137 +52,27 @@ body::after{
     position:fixed;
     width:100%;
     height:100%;
-    background: radial-gradient(circle at 20% 30%, rgba(0,150,255,0.2), transparent 40%),
-                radial-gradient(circle at 80% 70%, rgba(255,140,0,0.2), transparent 40%);
+    background:
+        radial-gradient(circle at 20% 30%, rgba(0,150,255,0.15), transparent 40%),
+        radial-gradient(circle at 80% 70%, rgba(255,140,0,0.15), transparent 40%);
     z-index:-1;
 }
 
 /* Header */
 header{
-    background:linear-gradient(to right,#0b1c3a,#09152c);
-    padding:80px 20px;
+    padding:90px 20px;
     text-align:center;
-    border-bottom:1px solid rgba(0,150,255,0.3);
+    background:linear-gradient(to right,#0f172a,#1e293b);
+    border-bottom:1px solid rgba(0,150,255,0.2);
 }
 
 header h1{
+    margin:0;
     font-size:44px;
     letter-spacing:4px;
-    background: linear-gradient(90deg,#00c3ff,#f59e0b);
+    background:linear-gradient(90deg,#00c3ff,#f59e0b);
     -webkit-background-clip:text;
     -webkit-text-fill-color:transparent;
-}
-
-/* Section */
-.section{
-    padding:80px 20px;
-    max-width:1100px;
-    margin:auto;
-}
-
-/* Futuristic Card */
-.machine-box{
-    background:rgba(20,30,60,0.6);
-    backdrop-filter:blur(15px);
-    border-radius:20px;
-    overflow:hidden;
-    box-shadow:0 0 40px rgba(0,150,255,0.3);
-    border:1px solid rgba(0,150,255,0.2);
-    transition:0.4s ease;
-}
-
-.machine-box:hover{
-    box-shadow:0 0 60px rgba(0,150,255,0.6);
-    transform:translateY(-5px);
-}
-
-.machine-img img{
-    width:100%;
-    display:block;
-}
-
-.machine-content{
-    padding:50px;
-}
-
-.machine-content h2{
-    font-size:34px;
-    border-left:6px solid #00c3ff;
-    padding-left:15px;
-}
-
-.machine-content p{
-    line-height:1.8;
-    color:#cbd5e1;
-}
-
-.specs li{
-    margin-bottom:12px;
-}
-
-/* Contact */
-.contact{
-    background:rgba(10,20,40,0.8);
-    padding:70px 20px;
-    text-align:center;
-    border-top:1px solid rgba(0,150,255,0.3);
-}
-
-.contact h2{
-    font-size:32px;
-}
-
-.contact a{
-    color:#00c3ff;
-    font-weight:600;
-    font-size:18px;
-    text-decoration:none;
-}
-
-footer{
-    background:#050b18;
-    text-align:center;
-    padding:25px;
-    font-size:14px;
-    color:#94a3b8;
-}
-</style>
-
-body{
-    margin:0;
-    font-family:'Montserrat',sans-serif;
-    background:#0b1120;
-    color:#e5e7eb;
-}
-
-/* Animated Industrial Glow Background */
-body::before{
-    content:"";
-    position:fixed;
-    width:100%;
-    height:100%;
-    background:
-        radial-gradient(circle at 20% 30%, rgba(255,140,0,0.1), transparent 40%),
-        radial-gradient(circle at 80% 70%, rgba(255,140,0,0.1), transparent 40%);
-    animation:moveBg 8s infinite alternate ease-in-out;
-    z-index:-1;
-}
-
-@keyframes moveBg {
-    0% { transform: translateY(0px); }
-    100% { transform: translateY(30px); }
-}
-
-header{
-    background:linear-gradient(to right,#0f172a,#1e293b);
-    padding:70px 20px;
-    text-align:center;
-}
-
-header h1{
-    margin:0;
-    font-size:42px;
-    letter-spacing:3px;
 }
 
 header p{
@@ -190,23 +80,27 @@ header p{
     color:#94a3b8;
 }
 
+/* Section */
 .section{
-    padding:80px 20px;
+    padding:100px 20px;
     max-width:1100px;
     margin:auto;
 }
 
+/* Premium Glass Card */
 .machine-box{
-    background:#1e293b;
-    border-radius:18px;
+    background:rgba(30,41,59,0.6);
+    backdrop-filter:blur(15px);
+    border-radius:20px;
     overflow:hidden;
-    box-shadow:0 25px 50px rgba(0,0,0,0.6);
-    animation:fadeUp 1s ease forwards;
+    border:1px solid rgba(0,150,255,0.2);
+    box-shadow:0 30px 60px rgba(0,0,0,0.6);
+    transition:0.4s ease;
 }
 
-@keyframes fadeUp{
-    from{opacity:0; transform:translateY(40px);}
-    to{opacity:1; transform:translateY(0);}
+.machine-box:hover{
+    transform:translateY(-8px);
+    box-shadow:0 40px 80px rgba(0,150,255,0.3);
 }
 
 .machine-img img{
@@ -215,7 +109,7 @@ header p{
 }
 
 .machine-content{
-    padding:50px;
+    padding:60px;
 }
 
 .machine-content h2{
@@ -238,11 +132,12 @@ header p{
     margin-bottom:12px;
 }
 
-/* Contact Section */
+/* Contact */
 .contact{
     background:#111827;
-    padding:60px 20px;
+    padding:80px 20px;
     text-align:center;
+    border-top:1px solid rgba(0,150,255,0.2);
 }
 
 .contact h2{
@@ -257,10 +152,15 @@ header p{
     font-size:18px;
 }
 
+.contact a:hover{
+    color:#00c3ff;
+}
+
+/* Footer */
 footer{
     background:#0f172a;
     text-align:center;
-    padding:20px;
+    padding:25px;
     font-size:14px;
     color:#94a3b8;
 }
@@ -318,6 +218,7 @@ footer{
 </body>
 
 </html>
+
 
 
 
