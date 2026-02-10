@@ -4,211 +4,278 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Shree Engineering | Precision CNC Lathe Manufacturer</title>
-<meta name="description" content="Shree Engineering manufactures precision CNC Lathe machines for industrial and export applications.">
-<meta name="keywords" content="CNC Lathe Machine, Precision CNC, Industrial Machinery">
-<meta name="author" content="Shree Engineering">
+<title>Shree Engineering | Precision CNC Systems | Industrial Manufacturing</title>
+
+<meta name="description" content="Shree Engineering manufactures precision CNC lathe systems engineered for industrial strength, structural reliability and global export manufacturing environments.">
 
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
 
 <style>
+html { scroll-behavior:smooth; }
+
 body{
     margin:0;
     font-family:'Montserrat',sans-serif;
-    background:#0b1120;
+    background:#050b18;
     color:#e5e7eb;
+    overflow-x:hidden;
 }
 
-/* HEADER */
-header{
+/* ================= VIDEO HERO ================= */
+
+.hero{
+    position:relative;
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
     text-align:center;
-    padding:100px 20px 70px;
-    background:linear-gradient(to right,#0f172a,#111827);
+    overflow:hidden;
 }
 
-header h1{
-    font-size:48px;
-    letter-spacing:4px;
-    margin:0;
+.hero video{
+    position:absolute;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    z-index:-3;
+    filter:brightness(0.35);
+}
+
+.hero-overlay{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(5,11,24,0.95));
+    z-index:-2;
+}
+
+/* Subtle animated blueprint grid */
+.hero::after{
+    content:"";
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:
+    linear-gradient(rgba(0,150,255,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,150,255,0.06) 1px, transparent 1px);
+    background-size:70px 70px;
+    animation:gridMove 30s linear infinite;
+    z-index:-1;
+}
+
+@keyframes gridMove{
+    from{transform:translateY(0);}
+    to{transform:translateY(70px);}
+}
+
+/* Rotating gear */
+.gear{
+    position:absolute;
+    width:600px;
+    opacity:0.04;
+    animation:rotateGear 40s linear infinite;
+}
+
+@keyframes rotateGear{
+    from{transform:rotate(0deg);}
+    to{transform:rotate(360deg);}
+}
+
+.hero h1{
+    font-size:72px;
+    font-weight:800;
+    letter-spacing:6px;
     background:linear-gradient(90deg,#00c3ff,#f59e0b);
     -webkit-background-clip:text;
     -webkit-text-fill-color:transparent;
 }
 
-header p{
-    margin-top:15px;
-    color:#94a3b8;
+.hero p{
+    margin-top:25px;
+    font-size:22px;
+    max-width:900px;
+    color:#cbd5e1;
 }
 
-/* MAIN SECTION */
-.section{
-    max-width:1100px;
-    margin:auto;
-    padding:80px 20px;
-}
+/* ================= PARALLAX ================= */
 
-.product{
+.parallax{
+    height:90vh;
+    background:url('precision-machine.jpeg') center/cover fixed;
     display:flex;
-    flex-wrap:wrap;
     align-items:center;
+    justify-content:center;
+}
+
+.parallax h2{
+    font-size:50px;
+    background:rgba(0,0,0,0.7);
+    padding:20px 40px;
+    border-radius:12px;
+}
+
+/* ================= SECTIONS ================= */
+
+.section{
+    padding:140px 20px;
+    max-width:1200px;
+    margin:auto;
+}
+
+h2{
+    font-size:44px;
+    margin-bottom:40px;
+    border-left:6px solid #00c3ff;
+    padding-left:15px;
+}
+
+p{
+    line-height:1.9;
+    color:#cbd5e1;
+}
+
+/* 3D Machine */
+.machine{
+    text-align:center;
+}
+
+.machine img{
+    width:55%;
+    border-radius:18px;
+    transition:0.6s ease;
+}
+
+.machine img:hover{
+    transform:rotateY(10deg) rotateX(5deg) scale(1.05);
+}
+
+/* Grid */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
     gap:40px;
 }
 
-.product-image{
-    flex:1;
-    text-align:center;
+.card{
+    background:#0f172a;
+    padding:40px;
+    border-radius:18px;
+    border:1px solid rgba(0,150,255,0.2);
+    transition:0.4s ease;
 }
 
-.product-image img{
-    width:50%;
-    max-width:600px;
-    border-radius:12px;
-    box-shadow:0 20px 40px rgba(0,0,0,0.5);
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 30px 70px rgba(0,150,255,0.4);
 }
 
-.product-info{
-    flex:1;
-}
-
-.product-info h2{
-    font-size:32px;
-    margin-bottom:15px;
-    border-left:5px solid #f59e0b;
-    padding-left:12px;
-}
-
-.product-info p{
-    line-height:1.7;
-    color:#cbd5e1;
-}
-
-.specs{
-    margin-top:20px;
-    padding-left:20px;
-}
-
-.specs li{
-    margin-bottom:8px;
-}
-
-/* WHY US */
-.why{
-    margin-top:80px;
-}
-
-.why h3{
-    font-size:26px;
-    margin-bottom:15px;
-    color:#f59e0b;
-}
-
-.why p{
-    line-height:1.7;
-    color:#cbd5e1;
-}
-
-/* CONTACT */
+/* CONTACT SECTION */
 .contact{
+    padding:160px 20px;
     background:#111827;
     text-align:center;
-    padding:70px 20px;
-    margin-top:100px;
 }
 
 .contact h2{
-    font-size:28px;
+    font-size:42px;
+    margin-bottom:30px;
+}
+
+.contact p{
+    font-size:20px;
 }
 
 .contact a{
-    color:#00c3ff;
+    color:#f59e0b;
+    font-size:22px;
     font-weight:600;
     text-decoration:none;
 }
 
+.contact a:hover{
+    color:#00c3ff;
+}
+
 /* FOOTER */
 footer{
-    text-align:center;
-    padding:20px;
     background:#0f172a;
+    text-align:center;
+    padding:60px;
     font-size:14px;
     color:#94a3b8;
-}
-
-/* SMALL NAMEPLATE */
-.nameplate{
-    position:fixed;
-    bottom:15px;
-    right:15px;
-    width:90px;
-    opacity:0.8;
-}
-
-.nameplate img{
-    width:100%;
-    border-radius:6px;
-}
-
-/* RESPONSIVE */
-@media(max-width:900px){
-    .product{
-        flex-direction:column;
-        text-align:center;
-    }
-    .product-image img{
-        width:80%;
-    }
 }
 </style>
 </head>
 
 <body>
 
-<header>
-    <h1>SHREE ENGINEERING</h1>
-    <p>Precision CNC Lathe Manufacturer | Industrial & Export Solutions</p>
-</header>
+<!-- HERO -->
+<section class="hero">
 
-<section class="section">
+    <video autoplay muted loop playsinline>
+        <source src="industrial-bg.mp4" type="video/mp4">
+    </video>
 
-    <div class="product">
-        <div class="product-image">
-            <img src="precision-machine.jpeg"
-                 alt="Precision CNC Lathe Machine"
-                 loading="lazy">
-        </div>
+    <div class="hero-overlay"></div>
 
-        <div class="product-info">
-            <h2>Precision CNC Machine</h2>
-            <p>
-                Engineered for high-accuracy turning and drilling operations.
-                Designed for reliability, stability and long industrial lifecycle.
-                Suitable for domestic and export manufacturing requirements.
-            </p>
+    <svg class="gear" viewBox="0 0 100 100">
+        <circle cx="50" cy="50" r="35" stroke="#00c3ff" stroke-width="2" fill="none"/>
+        <circle cx="50" cy="50" r="45" stroke="#f59e0b" stroke-width="2" fill="none"/>
+    </svg>
 
-            <ul class="specs">
-                <li>CNC Lathe Technology</li>
-                <li>High Accuracy Turning</li>
-                <li>Advanced Drilling Capability</li>
-                <li>Custom Industrial Configuration</li>
-                <li>Export-Ready Build Quality</li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="why">
-        <h3>Why Choose Shree Engineering</h3>
-        <p>
-            We focus on structural integrity, mechanical precision,
-            operational consistency and long-term industrial durability.
-            Our systems are built for real-world manufacturing performance.
-        </p>
+    <div>
+        <h1>SHREE ENGINEERING</h1>
+        <p>Precision CNC Systems | Industrial Strength | Global Manufacturing Standards</p>
     </div>
 
 </section>
 
+<!-- PARALLAX -->
+<section class="parallax">
+    <h2>Engineered For Industrial Performance</h2>
+</section>
+
+<!-- MACHINE -->
+<section class="section machine">
+    <h2>Precision CNC Turning Platform</h2>
+    <img src="precision-machine.jpeg" alt="Precision CNC Machine">
+    <p>
+    Designed for structural rigidity, dimensional accuracy and long-term industrial performance.
+    Built to integrate seamlessly into demanding production environments.
+    </p>
+</section>
+
+<!-- CAPABILITIES -->
+<section class="section">
+    <h2>Core Engineering Capabilities</h2>
+    <div class="grid">
+        <div class="card">Heavy-Duty Structural Casting</div>
+        <div class="card">Advanced CNC Controller Integration</div>
+        <div class="card">High-Speed Precision Turning</div>
+        <div class="card">Automation Ready Configuration</div>
+        <div class="card">Custom Industrial Engineering</div>
+        <div class="card">Export-Ready Compliance Structure</div>
+    </div>
+</section>
+
+<!-- INDUSTRIES -->
+<section class="section">
+    <h2>Industries Served</h2>
+    <div class="grid">
+        <div class="card">Automotive Manufacturing</div>
+        <div class="card">Heavy Engineering</div>
+        <div class="card">Aerospace Components</div>
+        <div class="card">Defense Equipment</div>
+        <div class="card">Tool & Die Production</div>
+        <div class="card">Global OEM Supply</div>
+    </div>
+</section>
+
+<!-- CONTACT -->
 <section class="contact">
     <h2>Contact Shree Engineering</h2>
-    <p>Email us for machine enquiries:</p>
+    <p>For industrial and export enquiries:</p>
     <p>
         <a href="mailto:shreeengineering2020@gmail.com">
         shreeengineering2020@gmail.com
@@ -217,17 +284,12 @@ footer{
 </section>
 
 <footer>
-    © Shree Engineering | Precision CNC Manufacturer
+© Shree Engineering | Precision CNC Systems | Industrial & Export Manufacturing
 </footer>
-
-<div class="nameplate">
-    <img src="machine-nameplate.jpeg"
-         alt="Machine Nameplate"
-         loading="lazy">
-</div>
 
 </body>
 </html>
+
 
 
 
