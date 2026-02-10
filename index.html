@@ -6,16 +6,7 @@
 
 <title>Shree Engineering | Precision CNC Lathe Machine Manufacturer India</title>
 
-<meta name="description" content="Shree Engineering is a leading Precision CNC Lathe Machine manufacturer in India delivering high-accuracy turning and drilling solutions for domestic and global export markets.">
-<meta name="keywords" content="CNC Lathe Machine Manufacturer India, Precision CNC Machine, Turning Machine, Industrial CNC Exporter, CNC Drilling Machine">
-<meta name="author" content="Shree Engineering">
-
-<meta property="og:title" content="Shree Engineering - Precision CNC Manufacturer">
-<meta property="og:description" content="High-accuracy industrial CNC Lathe machines engineered for global manufacturing standards.">
-<meta property="og:image" content="precision-machine.jpeg">
-
-<link rel="preload" as="image" href="precision-machine.jpeg">
-<link rel="preload" as="image" href="machine-nameplate.jpeg">
+<meta name="description" content="Shree Engineering is a leading CNC Lathe Machine manufacturer in India delivering high-accuracy turning and drilling solutions engineered for industrial and export standards.">
 
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
 
@@ -30,26 +21,25 @@ body{
     overflow-x:hidden;
 }
 
-/* ===== Blueprint Wireframe Animation ===== */
+/* Animated Blueprint Grid */
 body::before{
     content:"";
     position:fixed;
     width:100%;
     height:100%;
     background:
-        linear-gradient(rgba(0,150,255,0.06) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0,150,255,0.06) 1px, transparent 1px);
+        linear-gradient(rgba(0,150,255,0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,150,255,0.05) 1px, transparent 1px);
     background-size:70px 70px;
-    animation:gridMove 35s linear infinite;
+    animation:gridMove 40s linear infinite;
     z-index:-3;
 }
-
 @keyframes gridMove{
     from{transform:translateY(0);}
     to{transform:translateY(70px);}
 }
 
-/* Subtle multicolor industrial glow */
+/* Multicolor Glow */
 body::after{
     content:"";
     position:fixed;
@@ -61,41 +51,39 @@ body::after{
     z-index:-2;
 }
 
-/* Floating Nameplate (small & subtle) */
+/* Small Floating Nameplate */
 .nameplate{
     position:fixed;
     top:20px;
     right:20px;
-    width:100px;
+    width:90px;
     opacity:0.85;
     z-index:5;
 }
 
-/* ===== HEADER ===== */
+/* HEADER */
 header{
-    padding:120px 20px;
+    padding:140px 20px;
     text-align:center;
     background:linear-gradient(to right,#0f172a,#1e293b);
-    border-bottom:1px solid rgba(0,150,255,0.3);
 }
 
 header h1{
-    margin:0;
-    font-size:48px;
-    font-weight:800;
+    font-size:56px;
     letter-spacing:4px;
+    font-weight:800;
     background:linear-gradient(90deg,#00c3ff,#f59e0b);
     -webkit-background-clip:text;
     -webkit-text-fill-color:transparent;
 }
 
 header p{
-    margin-top:18px;
-    font-size:18px;
+    margin-top:20px;
+    font-size:20px;
     color:#94a3b8;
 }
 
-/* ===== SECTION ===== */
+/* Section */
 .section{
     padding:120px 20px;
     max-width:1200px;
@@ -106,12 +94,11 @@ header p{
 .product-wrapper{
     display:flex;
     flex-wrap:wrap;
-    gap:60px;
+    gap:70px;
     align-items:center;
     justify-content:center;
 }
 
-/* Machine Image 50% */
 .machine-img{
     flex:1;
     text-align:center;
@@ -119,57 +106,87 @@ header p{
 
 .machine-img img{
     width:50%;
-    border-radius:16px;
-    box-shadow:0 30px 60px rgba(0,0,0,0.6);
+    border-radius:18px;
+    box-shadow:0 40px 80px rgba(0,0,0,0.7);
     transition:0.6s ease;
-    will-change:transform;
 }
 
 .machine-img img:hover{
-    transform:rotateY(8deg) rotateX(4deg) scale(1.05);
+    transform:rotateY(8deg) rotateX(5deg) scale(1.05);
 }
 
-/* Technical Panel */
+/* Tech Panel */
 .tech-panel{
     flex:1;
-    background:rgba(30,41,59,0.7);
-    backdrop-filter:blur(10px);
+    background:rgba(30,41,59,0.75);
+    backdrop-filter:blur(12px);
     padding:50px;
-    border-radius:20px;
+    border-radius:24px;
     border:1px solid rgba(0,150,255,0.3);
 }
 
 .tech-panel h2{
-    font-size:32px;
+    font-size:34px;
     border-left:6px solid #f59e0b;
     padding-left:15px;
 }
 
 .tech-panel ul{
-    padding-left:20px;
     line-height:2;
 }
 
-.tech-panel li{
-    margin-bottom:10px;
-}
-
-/* SEO Rich Section */
-.seo-content{
-    margin-top:100px;
-    line-height:1.8;
-    color:#cbd5e1;
-}
-
-/* Why Choose */
-.why{
+/* Industrial Capability Section */
+.capability{
     margin-top:120px;
     text-align:center;
 }
 
-.why h2{
-    font-size:34px;
-    margin-bottom:50px;
+.capability h2{
+    font-size:38px;
+    margin-bottom:40px;
+}
+
+.capability p{
+    max-width:900px;
+    margin:auto;
+    line-height:1.9;
+    color:#cbd5e1;
+}
+
+/* Process Section */
+.process{
+    margin-top:120px;
+}
+
+.process h2{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.process-grid{
+    display:flex;
+    flex-wrap:wrap;
+    gap:40px;
+    justify-content:center;
+}
+
+.process-step{
+    width:260px;
+    background:#1e293b;
+    padding:30px;
+    border-radius:16px;
+    transition:0.3s;
+}
+
+.process-step:hover{
+    transform:translateY(-10px);
+    box-shadow:0 20px 40px rgba(0,150,255,0.3);
+}
+
+/* Why Section */
+.why{
+    margin-top:120px;
+    text-align:center;
 }
 
 .why-grid{
@@ -183,39 +200,48 @@ header p{
     width:280px;
     padding:30px;
     background:#1e293b;
-    border-radius:15px;
+    border-radius:16px;
     transition:0.3s;
 }
 
 .why-item:hover{
     transform:translateY(-8px);
-    box-shadow:0 20px 40px rgba(0,150,255,0.4);
+    box-shadow:0 20px 40px rgba(0,150,255,0.3);
+}
+
+/* Export Section */
+.export{
+    margin-top:120px;
+    text-align:center;
+}
+
+.export p{
+    max-width:900px;
+    margin:auto;
+    line-height:1.9;
+    color:#cbd5e1;
 }
 
 /* Contact */
 .contact{
-    margin-top:120px;
-    padding:100px 20px;
-    text-align:center;
+    margin-top:140px;
+    padding:120px 20px;
     background:#111827;
-}
-
-.contact h2{
-    font-size:32px;
+    text-align:center;
 }
 
 .contact a{
     color:#f59e0b;
     font-weight:600;
+    font-size:20px;
     text-decoration:none;
-    font-size:18px;
 }
 
 footer{
-    padding:30px;
+    padding:40px;
     text-align:center;
-    font-size:14px;
     color:#94a3b8;
+    font-size:14px;
 }
 
 @media(max-width:900px){
@@ -235,63 +261,88 @@ footer{
 <img src="machine-nameplate.jpeg" class="nameplate" alt="Machine Nameplate">
 
 <header>
-    <h1>SHREE ENGINEERING</h1>
-    <p>Global Standard Precision CNC Lathe Machine Manufacturer</p>
+<h1>SHREE ENGINEERING</h1>
+<p>Precision CNC Lathe Machine Manufacturer | Industrial & Export Solutions</p>
 </header>
 
 <section class="section">
 
 <div class="product-wrapper">
-
     <div class="machine-img">
-        <img src="precision-machine.jpeg" alt="Precision CNC Lathe Machine by Shree Engineering">
+        <img src="precision-machine.jpeg" alt="Precision CNC Lathe Machine">
     </div>
 
     <div class="tech-panel">
         <h2>Precision CNC Lathe Machine</h2>
         <ul>
             <li>High Accuracy Turning Operations</li>
-            <li>Advanced CNC Control System</li>
-            <li>Industrial Grade Components</li>
-            <li>Customisable Industrial Configuration</li>
-            <li>Export-Ready Manufacturing Standards</li>
+            <li>Advanced CNC Control Integration</li>
+            <li>Industrial-Grade Mechanical Structure</li>
+            <li>Heavy Duty Performance Architecture</li>
+            <li>Customisable Operational Configurations</li>
+            <li>Engineered for Continuous Production</li>
         </ul>
     </div>
-
 </div>
 
-<div class="seo-content">
-    <h2>Industrial CNC Manufacturing Excellence</h2>
+<div class="capability">
+    <h2>Industrial Manufacturing Capability</h2>
     <p>
-    Shree Engineering is a trusted CNC Lathe Machine manufacturer in India offering precision turning and drilling solutions for heavy industrial applications. 
-    Our machines are engineered for accuracy, durability and global export compliance standards.
+    Shree Engineering designs and manufactures CNC Lathe Machines engineered for precision machining, 
+    structural durability and long-term industrial performance. 
+    Our design philosophy integrates mechanical strength, advanced control systems and operational reliability.
     </p>
+</div>
+
+<div class="process">
+    <h2>Engineering & Production Process</h2>
+    <div class="process-grid">
+        <div class="process-step">
+            <h3>Design Engineering</h3>
+            <p>Advanced mechanical drafting and structural analysis.</p>
+        </div>
+        <div class="process-step">
+            <h3>Precision Assembly</h3>
+            <p>Careful integration of CNC systems and industrial components.</p>
+        </div>
+        <div class="process-step">
+            <h3>Performance Testing</h3>
+            <p>Operational testing under industrial load conditions.</p>
+        </div>
+    </div>
 </div>
 
 <div class="why">
     <h2>Why Choose Shree Engineering</h2>
-
     <div class="why-grid">
         <div class="why-item">
-            <h3>Precision Engineering</h3>
-            <p>Micron-level machining accuracy for critical industrial applications.</p>
+            <h3>Mechanical Precision</h3>
+            <p>Designed for micron-level machining accuracy.</p>
         </div>
         <div class="why-item">
-            <h3>Export Ready</h3>
-            <p>Designed for international manufacturing and industrial compliance.</p>
+            <h3>Export-Ready Standards</h3>
+            <p>Manufactured to align with global industrial requirements.</p>
         </div>
         <div class="why-item">
             <h3>Custom CNC Solutions</h3>
-            <p>Tailored machine configuration as per operational requirements.</p>
+            <p>Flexible configuration based on industrial operations.</p>
         </div>
     </div>
+</div>
+
+<div class="export">
+    <h2>Global Market Readiness</h2>
+    <p>
+    Our machines are structured for adaptability in domestic and international markets, 
+    ensuring compliance with diverse industrial applications and manufacturing environments.
+    </p>
 </div>
 
 </section>
 
 <section class="contact">
     <h2>Contact Shree Engineering</h2>
-    <p>Email for industrial & export enquiries:</p>
+    <p>Email for industrial and export enquiries:</p>
     <p>
         <a href="mailto:shreeengineering2020@gmail.com">
         shreeengineering2020@gmail.com
@@ -300,11 +351,12 @@ footer{
 </section>
 
 <footer>
-© Shree Engineering | Precision CNC Lathe Machine Manufacturer | India
+© Shree Engineering | Precision CNC Lathe Machine Manufacturer | Industrial & Export Solutions
 </footer>
 
 </body>
 </html>
+
 
 
 
