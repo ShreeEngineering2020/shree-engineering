@@ -22,148 +22,189 @@ body{
     overflow-x:hidden;
 }
 
-/* Multicolour Mechanical Background */
+/* ===================== */
+/* MULTICOLOUR INDUSTRIAL BACKGROUND */
+/* ===================== */
 body::before{
     content:"";
     position:fixed;
     width:100%;
     height:100%;
     background:
-        radial-gradient(circle at 15% 20%, rgba(0,150,255,0.15), transparent 40%),
-        radial-gradient(circle at 85% 70%, rgba(255,140,0,0.15), transparent 40%),
-        radial-gradient(circle at 50% 90%, rgba(0,255,150,0.10), transparent 40%);
-    z-index:-2;
+        radial-gradient(circle at 10% 20%, rgba(0,150,255,0.18), transparent 40%),
+        radial-gradient(circle at 85% 75%, rgba(255,140,0,0.18), transparent 40%),
+        radial-gradient(circle at 50% 95%, rgba(0,255,150,0.12), transparent 40%);
+    z-index:-3;
 }
 
-/* Mechanical grid overlay */
+/* Blueprint Grid */
 body::after{
     content:"";
     position:fixed;
     width:100%;
     height:100%;
     background-image:
-        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
-    background-size:60px 60px;
+        linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+    background-size:70px 70px;
+    z-index:-2;
+}
+
+/* Moving Gear SVG */
+.gear{
+    position:fixed;
+    width:220px;
+    opacity:0.06;
     z-index:-1;
+    animation:rotateGear 20s linear infinite;
+}
+.gear.left{ top:20%; left:5%; }
+.gear.right{ bottom:10%; right:5%; }
+
+@keyframes rotateGear{
+    from{ transform:rotate(0deg); }
+    to{ transform:rotate(360deg); }
 }
 
 /* HERO */
 .hero{
-    padding:100px 20px;
+    padding:120px 20px;
     text-align:center;
     background:linear-gradient(to right,#0f172a,#1e293b);
+    border-bottom:1px solid rgba(0,150,255,0.3);
 }
-
 .hero h1{
-    font-size:50px;
+    font-size:56px;
     letter-spacing:4px;
     background:linear-gradient(90deg,#00c3ff,#f59e0b);
     -webkit-background-clip:text;
     -webkit-text-fill-color:transparent;
 }
-
 .hero p{
     margin-top:20px;
+    font-size:20px;
     color:#94a3b8;
-    font-size:18px;
 }
 
-/* MACHINE SECTION */
+/* SECTION */
 .section{
-    padding:100px 20px;
-    max-width:1300px;
+    padding:120px 20px;
+    max-width:1400px;
     margin:auto;
 }
 
+/* MACHINE LAYOUT */
 .machine-wrapper{
     display:flex;
     flex-wrap:wrap;
     align-items:center;
     justify-content:center;
-    gap:60px;
+    gap:80px;
 }
 
-/* Image */
+/* IMAGE */
 .machine-img{
     flex:1;
     text-align:center;
     perspective:1000px;
 }
-
 .machine-img img{
     width:50%;
-    max-width:500px;
+    max-width:520px;
+    border-radius:16px;
     transition:transform 0.6s ease, box-shadow 0.6s ease;
-    border-radius:14px;
-    box-shadow:0 25px 50px rgba(0,0,0,0.6);
+    box-shadow:0 30px 60px rgba(0,0,0,0.6);
 }
-
 .machine-img img:hover{
-    transform:rotateY(8deg) rotateX(4deg) scale(1.03);
-    box-shadow:0 40px 80px rgba(0,150,255,0.4);
+    transform:rotateY(8deg) rotateX(5deg) scale(1.05);
+    box-shadow:0 50px 100px rgba(0,150,255,0.5);
 }
 
-/* Specs Panel */
+/* SPEC PANEL */
 .spec-panel{
     flex:1;
-    background:rgba(30,41,59,0.7);
-    backdrop-filter:blur(15px);
-    padding:50px;
-    border-radius:20px;
+    background:rgba(30,41,59,0.75);
+    backdrop-filter:blur(18px);
+    padding:60px;
+    border-radius:24px;
     border:1px solid rgba(0,150,255,0.3);
-    box-shadow:0 30px 60px rgba(0,0,0,0.5);
+    box-shadow:0 40px 80px rgba(0,0,0,0.6);
 }
-
 .spec-panel h2{
     margin-top:0;
-    font-size:32px;
+    font-size:36px;
     border-left:6px solid #f59e0b;
-    padding-left:15px;
+    padding-left:18px;
 }
-
 .spec-panel ul{
     margin-top:25px;
     padding-left:20px;
 }
-
 .spec-panel li{
-    margin-bottom:12px;
+    margin-bottom:14px;
 }
 
-/* Technical Table */
+/* TECH TABLE */
 .tech-table{
-    margin-top:30px;
+    margin-top:35px;
     width:100%;
     border-collapse:collapse;
 }
-
 .tech-table td{
-    padding:12px;
+    padding:14px;
     border-bottom:1px solid rgba(255,255,255,0.1);
 }
-
 .tech-table td:first-child{
     color:#94a3b8;
 }
 
+/* STATS */
+.stats{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:40px;
+    text-align:center;
+    padding:100px 20px;
+    background:#0f172a;
+}
+.stat h3{
+    font-size:40px;
+    color:#f59e0b;
+}
+.stat p{
+    color:#94a3b8;
+}
+
+/* WHY SECTION */
+.why{
+    padding:120px 20px;
+    text-align:center;
+}
+.why h2{
+    margin-bottom:60px;
+}
+.why-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:50px;
+    max-width:1200px;
+    margin:auto;
+}
+.why-grid h4{
+    color:#f59e0b;
+}
+
 /* CONTACT */
 .contact{
-    padding:100px 20px;
+    padding:120px 20px;
     text-align:center;
     background:#111827;
 }
-
-.contact h2{
-    margin-bottom:20px;
-}
-
 .contact a{
     color:#f59e0b;
     font-size:18px;
     text-decoration:none;
 }
-
 .contact a:hover{
     color:#00c3ff;
 }
@@ -171,32 +212,41 @@ body::after{
 /* FOOTER */
 footer{
     text-align:center;
-    padding:25px;
+    padding:30px;
     background:#0f172a;
     color:#94a3b8;
 }
 
-/* WhatsApp Button */
+/* WhatsApp */
 .whatsapp{
     position:fixed;
-    bottom:20px;
-    right:20px;
+    bottom:25px;
+    right:25px;
     background:#25D366;
     color:#fff;
     font-size:22px;
-    padding:15px 18px;
+    padding:16px 20px;
     border-radius:50%;
     text-decoration:none;
-    box-shadow:0 5px 15px rgba(0,0,0,0.4);
+    box-shadow:0 5px 20px rgba(0,0,0,0.5);
 }
 </style>
 </head>
 
 <body>
 
+<!-- Moving Gears -->
+<svg class="gear left" viewBox="0 0 100 100">
+<circle cx="50" cy="50" r="30" stroke="white" stroke-width="4" fill="none"/>
+</svg>
+
+<svg class="gear right" viewBox="0 0 100 100">
+<circle cx="50" cy="50" r="30" stroke="white" stroke-width="4" fill="none"/>
+</svg>
+
 <section class="hero">
     <h1>SHREE ENGINEERING</h1>
-    <p>Precision CNC Technology for Modern Manufacturing & Export Markets</p>
+    <p>Precision CNC Technology for Industrial & Export Markets</p>
 </section>
 
 <section class="section">
@@ -217,22 +267,10 @@ footer{
             </ul>
 
             <table class="tech-table">
-                <tr>
-                    <td>Accuracy</td>
-                    <td>±0.01 mm</td>
-                </tr>
-                <tr>
-                    <td>Operation</td>
-                    <td>24/7 Industrial Use</td>
-                </tr>
-                <tr>
-                    <td>Control System</td>
-                    <td>Advanced CNC</td>
-                </tr>
-                <tr>
-                    <td>Customisation</td>
-                    <td>Available</td>
-                </tr>
+                <tr><td>Machining Accuracy</td><td>±0.01 mm</td></tr>
+                <tr><td>Production Capacity</td><td>24/7 Operation</td></tr>
+                <tr><td>CNC Control System</td><td>Advanced Industrial Control</td></tr>
+                <tr><td>Export Capability</td><td>Available</td></tr>
             </table>
 
         </div>
@@ -240,14 +278,35 @@ footer{
     </div>
 </section>
 
+<section class="stats">
+    <div class="stat"><h3>±0.01mm</h3><p>Precision Accuracy</p></div>
+    <div class="stat"><h3>24/7</h3><p>Industrial Operation</p></div>
+    <div class="stat"><h3>100%</h3><p>Custom Engineering</p></div>
+    <div class="stat"><h3>Global</h3><p>Export Ready</p></div>
+</section>
+
+<section class="why">
+    <h2>Why Choose Shree Engineering</h2>
+    <div class="why-grid">
+        <div>
+            <h4>Industrial Grade Construction</h4>
+            <p>Heavy-duty vibration resistant build for long-term durability.</p>
+        </div>
+        <div>
+            <h4>Advanced CNC Automation</h4>
+            <p>Precision-driven automation for maximum productivity.</p>
+        </div>
+        <div>
+            <h4>Export Ready Manufacturing</h4>
+            <p>Designed to meet international production standards.</p>
+        </div>
+    </div>
+</section>
+
 <section class="contact">
     <h2>Contact Shree Engineering</h2>
     <p>Email us for machine enquiries:</p>
-    <p>
-        <a href="mailto:shreeengineering2020@gmail.com">
-        shreeengineering2020@gmail.com
-        </a>
-    </p>
+    <p><a href="mailto:shreeengineering2020@gmail.com">shreeengineering2020@gmail.com</a></p>
 </section>
 
 <footer>
@@ -258,3 +317,4 @@ Shree Engineering | Precision CNC Machine Manufacturer | India
 
 </body>
 </html>
+
