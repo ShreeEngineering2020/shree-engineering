@@ -7,6 +7,8 @@
 <title>Shree Engineering | Precision CNC Manufacturing Systems</title>
 
 <meta name="description" content="Shree Engineering designs and manufactures precision CNC lathe systems engineered for structural rigidity, industrial reliability and global manufacturing integration.">
+<meta name="keywords" content="CNC Lathe Machine Manufacturer India, Precision CNC Systems, Industrial CNC Solutions, Export CNC Manufacturer">
+<meta name="author" content="Shree Engineering">
 
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
 
@@ -20,26 +22,40 @@ body{
     overflow-x:hidden;
 }
 
-/* Blueprint Grid */
+/* Subtle Blueprint Grid */
 body::before{
     content:"";
     position:fixed;
     width:100%;
     height:100%;
     background:
-    linear-gradient(rgba(0,150,255,0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0,150,255,0.04) 1px, transparent 1px);
-    background-size:70px 70px;
-    animation:gridMove 35s linear infinite;
+    linear-gradient(rgba(0,150,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,150,255,0.03) 1px, transparent 1px);
+    background-size:80px 80px;
+    animation:gridMove 40s linear infinite;
     z-index:-2;
 }
 @keyframes gridMove{
     from{transform:translateY(0);}
-    to{transform:translateY(70px);}
+    to{transform:translateY(80px);}
+}
+
+/* Floating Gear */
+.gear{
+    position:fixed;
+    right:40px;
+    bottom:40px;
+    width:120px;
+    opacity:0.05;
+    animation:spin 25s linear infinite;
+}
+@keyframes spin{
+    from{transform:rotate(0deg);}
+    to{transform:rotate(360deg);}
 }
 
 .section{
-    padding:140px 20px;
+    padding:120px 20px;
     max-width:1200px;
     margin:auto;
 }
@@ -85,7 +101,7 @@ p{
     text-align:center;
 }
 .machine img{
-    width:60%;
+    width:55%;
     border-radius:18px;
     transition:0.6s;
 }
@@ -95,8 +111,8 @@ p{
 
 .grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:40px;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
 }
 
 .card{
@@ -104,11 +120,31 @@ p{
     padding:40px;
     border-radius:18px;
     border:1px solid rgba(0,150,255,0.2);
+    transition:0.4s;
+}
+.card:hover{
+    transform:translateY(-6px);
+    border-color:#00c3ff;
 }
 
+/* Stats Section */
+.stats{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:30px;
+    text-align:center;
+}
+.stat-box{
+    background:#111827;
+    padding:40px;
+    border-radius:14px;
+    border:1px solid rgba(255,255,255,0.05);
+}
+
+/* Contact */
 .contact{
     background:#111827;
-    padding:160px 20px;
+    padding:140px 20px;
     text-align:center;
 }
 
@@ -130,6 +166,11 @@ footer{
 
 <body>
 
+<!-- Rotating Gear SVG -->
+<svg class="gear" viewBox="0 0 100 100">
+<circle cx="50" cy="50" r="30" stroke="#00c3ff" stroke-width="4" fill="none"/>
+</svg>
+
 <section class="hero">
 <div>
 <h1>SHREE ENGINEERING</h1>
@@ -147,20 +188,11 @@ structural rigidity, vibration control and long-term industrial reliability acro
 </section>
 
 <section class="section">
-<h2>Engineering Architecture</h2>
+<h2>Engineering Philosophy</h2>
 <p>
-Each machine platform integrates structural casting optimization, spindle stability calibration,
-controller synchronization and industrial-grade component integration.
-Our engineering philosophy prioritizes precision alignment, load-bearing capacity,
-thermal stability and repeatable dimensional accuracy.
-</p>
-</section>
-
-<section class="section">
-<h2>Manufacturing Infrastructure</h2>
-<p>
-Production workflows incorporate precision assembly alignment, multi-stage mechanical inspection,
-operational load simulation and calibration verification before final dispatch.
+We design CNC systems around structural integrity, spindle stability,
+precision alignment and thermal control architecture.
+Every machine is engineered for repeatable dimensional accuracy.
 </p>
 </section>
 
@@ -170,18 +202,20 @@ operational load simulation and calibration verification before final dispatch.
 <div class="card">High-Speed Turning & Facing</div>
 <div class="card">Thread Cutting & Boring</div>
 <div class="card">Drilling & Precision Machining</div>
-<div class="card">CNC Controller Integration</div>
 <div class="card">Automation Compatibility</div>
-<div class="card">Custom Engineering Configuration</div>
+<div class="card">Custom CNC Configuration</div>
+<div class="card">Advanced Control Systems</div>
 </div>
 </section>
 
 <section class="section">
-<h2>Quality & Inspection Framework</h2>
-<p>
-Every system undergoes structural verification, spindle accuracy testing,
-dimensional inspection and operational stress evaluation.
-</p>
+<h2>Why Choose Shree Engineering</h2>
+<div class="grid">
+<div class="card">Rigid Structural Casting Design</div>
+<div class="card">Industrial-Grade Component Integration</div>
+<div class="card">Precision Assembly Calibration</div>
+<div class="card">Lifecycle Operational Support</div>
+</div>
 </section>
 
 <section class="section">
@@ -197,19 +231,31 @@ dimensional inspection and operational stress evaluation.
 </section>
 
 <section class="section">
-<h2>Lifecycle Support</h2>
+<h2>Manufacturing Infrastructure</h2>
 <p>
-Our approach extends beyond delivery. We emphasize operational efficiency,
-maintenance planning, system integration and long-term industrial reliability.
+Production workflows integrate mechanical inspection,
+load simulation testing, operational calibration and
+structural validation before dispatch.
 </p>
 </section>
 
 <section class="section">
-<h2>Export Manufacturing Vision</h2>
+<h2>Global Manufacturing Alignment</h2>
 <p>
-Our CNC systems are developed to align with global manufacturing environments,
-ensuring compatibility across varied industrial frameworks and production ecosystems.
+Our CNC systems are developed for compatibility with
+international production environments, automation systems
+and modern industrial ecosystems.
 </p>
+</section>
+
+<section class="section">
+<h2>Operational Strength Indicators</h2>
+<div class="stats">
+<div class="stat-box">Industrial CNC Platform Architecture</div>
+<div class="stat-box">Precision Alignment Engineering</div>
+<div class="stat-box">Export-Ready Manufacturing Design</div>
+<div class="stat-box">Long-Term Reliability Engineering</div>
+</div>
 </section>
 
 <section class="contact">
@@ -228,6 +274,7 @@ shreeengineering2020@gmail.com
 
 </body>
 </html>
+
 
 
 
