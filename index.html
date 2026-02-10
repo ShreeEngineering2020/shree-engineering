@@ -2,15 +2,29 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="google-site-verification" content="eHLip4kvIMl8avxC-TXuK0QfH4nORRrXaRuYWzXIAyQ" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Shree Engineering | Precision CNC Manufacturing Systems</title>
+<title>Shree Engineering | Precision CNC Lathe Manufacturer India</title>
 
-<meta name="description" content="Shree Engineering designs and manufactures precision CNC lathe systems engineered for structural rigidity, industrial reliability and global manufacturing integration.">
-<meta name="keywords" content="CNC Lathe Machine Manufacturer India, Precision CNC Systems, Industrial CNC Solutions, Export CNC Manufacturer">
+<meta name="description" content="Shree Engineering manufactures high-precision CNC lathe machines engineered for structural rigidity, industrial reliability and global manufacturing integration.">
+<meta name="keywords" content="CNC Lathe Machine Manufacturer India, Precision CNC Machine, Industrial CNC Systems, Shree Engineering">
 <meta name="author" content="Shree Engineering">
 
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Product Structured Data for Google -->
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "Product",
+ "name": "Precision CNC Lathe Machine",
+ "image": "https://shreeengineering2020.github.io/shree-engineering/precision-machine.jpeg",
+ "brand": {
+   "@type": "Brand",
+   "name": "Shree Engineering"
+ }
+}
+</script>
 
 <style>
 html{scroll-behavior:smooth;}
@@ -23,65 +37,28 @@ body{
     overflow-x:hidden;
 }
 
-/* Subtle Blueprint Grid */
+/* Blueprint Grid Background */
 body::before{
     content:"";
     position:fixed;
     width:100%;
     height:100%;
     background:
-        linear-gradient(rgba(0,150,255,0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0,150,255,0.03) 1px, transparent 1px);
-    background-size:80px 80px;
-    animation:gridMove 40s linear infinite;
+    linear-gradient(rgba(0,150,255,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,150,255,0.04) 1px, transparent 1px);
+    background-size:70px 70px;
+    animation:gridMove 35s linear infinite;
     z-index:-2;
 }
 
 @keyframes gridMove{
     from{transform:translateY(0);}
-    to{transform:translateY(80px);}
+    to{transform:translateY(70px);}
 }
 
-/* Floating Rotating Gear */
-.gear{
-    position:fixed;
-    right:40px;
-    bottom:40px;
-    width:110px;
-    opacity:0.05;
-    animation:spin 25s linear infinite;
-}
-
-@keyframes spin{
-    from{transform:rotate(0deg);}
-    to{transform:rotate(360deg);}
-}
-
-/* Small Floating Nameplate */
-.nameplate{
-    position:fixed;
-    left:25px;
-    bottom:25px;
-    width:130px;
-    opacity:0.85;
-    border-radius:8px;
-    box-shadow:0 10px 25px rgba(0,0,0,0.5);
-    transition:0.3s ease;
-}
-.nameplate:hover{
-    transform:scale(1.05);
-    opacity:1;
-}
-
-/* Sections */
-.section{
-    padding:110px 20px;
-    max-width:1100px;
-    margin:auto;
-}
-
+/* Hero Section */
 .hero{
-    height:100vh;
+    height:90vh;
     display:flex;
     align-items:center;
     justify-content:center;
@@ -92,67 +69,77 @@ body::before{
 .hero h1{
     font-size:58px;
     font-weight:800;
-    letter-spacing:6px;
+    letter-spacing:5px;
     background:linear-gradient(90deg,#00c3ff,#f59e0b);
     -webkit-background-clip:text;
     -webkit-text-fill-color:transparent;
 }
 
 .hero p{
-    margin-top:20px;
+    margin-top:25px;
     font-size:20px;
-    max-width:850px;
     color:#cbd5e1;
 }
 
+/* Sections */
+.section{
+    padding:120px 20px;
+    max-width:1100px;
+    margin:auto;
+}
+
 h2{
-    font-size:38px;
-    margin-bottom:30px;
-    border-left:5px solid #00c3ff;
+    font-size:36px;
+    margin-bottom:40px;
+    border-left:6px solid #00c3ff;
     padding-left:15px;
 }
 
 p{
-    line-height:1.8;
+    line-height:1.9;
     color:#cbd5e1;
 }
 
-/* Machine Section */
+/* Machine Image Small */
 .machine{
     text-align:center;
+    position:relative;
 }
 
-/* VERY SMALL MACHINE IMAGE */
-.machine img{
-    width:25%;
-    min-width:220px;
-    border-radius:14px;
-    box-shadow:0 15px 35px rgba(0,0,0,0.6);
-    transition:0.4s ease;
+.machine img.main-machine{
+    width:35%;
+    border-radius:18px;
+    transition:0.5s;
 }
 
-.machine img:hover{
-    transform:scale(1.05);
+.machine img.main-machine:hover{
+    transform:rotateY(6deg) scale(1.05);
+}
+
+/* Nameplate Small on Side */
+.nameplate{
+    position:absolute;
+    right:5%;
+    bottom:-40px;
+}
+
+.nameplate img{
+    width:120px;
+    opacity:0.9;
 }
 
 /* Grid Cards */
 .grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-    gap:25px;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
 }
 
 .card{
     background:#0f172a;
     padding:30px;
-    border-radius:16px;
+    border-radius:14px;
     border:1px solid rgba(0,150,255,0.2);
-    transition:0.3s;
-}
-
-.card:hover{
-    transform:translateY(-6px);
-    border-color:#00c3ff;
 }
 
 /* Contact */
@@ -176,63 +163,69 @@ footer{
     font-size:14px;
     color:#94a3b8;
 }
-
-/* Responsive */
-@media(max-width:900px){
-    .machine img{
-        width:70%;
-    }
-}
 </style>
 </head>
 
 <body>
 
-<!-- Rotating Gear -->
-<svg class="gear" viewBox="0 0 100 100">
-<circle cx="50" cy="50" r="30" stroke="#00c3ff" stroke-width="4" fill="none"/>
-</svg>
-
-<!-- Floating Nameplate -->
-<img src="machine-nameplate.jpeg" alt="Machine Nameplate" class="nameplate">
-
 <section class="hero">
 <div>
 <h1>SHREE ENGINEERING</h1>
-<p>Precision CNC Manufacturing Systems | Industrial Strength | Global Integration</p>
+<p>Precision CNC Lathe Manufacturer | Industrial & Export Manufacturing Systems</p>
 </div>
 </section>
 
 <section class="section machine">
-<h2>Precision CNC Lathe Platform</h2>
-<img src="precision-machine.jpeg" alt="Precision CNC Machine">
+<h2>Precision CNC Lathe Machine</h2>
+
+<img src="precision-machine.jpeg"
+     alt="Precision CNC Lathe Machine by Shree Engineering India"
+     title="Precision CNC Lathe Machine Manufacturer - Shree Engineering"
+     class="main-machine"
+     loading="lazy">
+
+<div class="nameplate">
+<img src="machine-nameplate.jpeg"
+     alt="CNC Machine Nameplate - Shree Engineering Precision Model"
+     title="Industrial CNC Machine Nameplate - Shree Engineering"
+     loading="lazy">
+</div>
+
 <p>
-Our CNC lathe systems are engineered to deliver high-accuracy turning performance,
-structural rigidity, vibration control and long-term industrial reliability.
+Our precision CNC lathe systems are engineered for structural rigidity,
+vibration stability, dimensional accuracy and long-term industrial reliability.
+Each machine platform is designed to support high-speed turning,
+threading, boring and drilling operations across demanding manufacturing environments.
 </p>
 </section>
 
 <section class="section">
-<h2>Technical Capabilities</h2>
+<h2>Engineering Architecture</h2>
+<p>
+Advanced casting alignment, spindle stabilization, CNC controller synchronization
+and mechanical load optimization ensure consistent repeatability and operational durability.
+Our engineering philosophy focuses on precision alignment and industrial robustness.
+</p>
+</section>
+
+<section class="section">
+<h2>Industrial Capabilities</h2>
 <div class="grid">
-<div class="card">High-Speed Turning & Facing</div>
+<div class="card">High Accuracy Turning</div>
 <div class="card">Thread Cutting & Boring</div>
-<div class="card">Drilling & Precision Machining</div>
-<div class="card">Automation Compatibility</div>
-<div class="card">Custom CNC Configuration</div>
-<div class="card">Advanced Control Systems</div>
+<div class="card">CNC Controller Integration</div>
+<div class="card">Automation Ready Configuration</div>
+<div class="card">Industrial Load Stability</div>
+<div class="card">Custom Engineering Design</div>
 </div>
 </section>
 
 <section class="section">
-<h2>Industrial Applications</h2>
-<div class="grid">
-<div class="card">Automotive Manufacturing</div>
-<div class="card">Heavy Engineering</div>
-<div class="card">Aerospace Components</div>
-<div class="card">Tool & Die Workshops</div>
-<div class="card">OEM Manufacturing Lines</div>
-</div>
+<h2>Global Manufacturing Integration</h2>
+<p>
+Our CNC systems are developed to integrate seamlessly into global manufacturing
+workflows, supporting export-grade production standards and industrial expansion strategies.
+</p>
 </section>
 
 <section class="contact">
@@ -246,11 +239,12 @@ shreeengineering2020@gmail.com
 </section>
 
 <footer>
-© Shree Engineering | Precision CNC Manufacturing Systems
+© Shree Engineering | Precision CNC Lathe Manufacturer | Industrial Solutions India
 </footer>
 
 </body>
 </html>
+
 
 
 
