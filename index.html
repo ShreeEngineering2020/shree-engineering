@@ -12,7 +12,7 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
 
-<!-- Product Structured Data for Google -->
+<!-- Structured Data -->
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -37,7 +37,7 @@ body{
     overflow-x:hidden;
 }
 
-/* Blueprint Grid Background */
+/* Background Blueprint Grid */
 body::before{
     content:"";
     position:fixed;
@@ -56,7 +56,6 @@ body::before{
     to{transform:translateY(70px);}
 }
 
-/* Hero Section */
 .hero{
     height:90vh;
     display:flex;
@@ -81,7 +80,6 @@ body::before{
     color:#cbd5e1;
 }
 
-/* Sections */
 .section{
     padding:120px 20px;
     max-width:1100px;
@@ -100,7 +98,7 @@ p{
     color:#cbd5e1;
 }
 
-/* Machine Image Small */
+/* Machine */
 .machine{
     text-align:center;
     position:relative;
@@ -116,7 +114,6 @@ p{
     transform:rotateY(6deg) scale(1.05);
 }
 
-/* Nameplate Small on Side */
 .nameplate{
     position:absolute;
     right:5%;
@@ -128,7 +125,7 @@ p{
     opacity:0.9;
 }
 
-/* Grid Cards */
+/* Grid */
 .grid{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -140,6 +137,41 @@ p{
     padding:30px;
     border-radius:14px;
     border:1px solid rgba(0,150,255,0.2);
+}
+
+/* Form Section */
+.form-section{
+    background:#0f172a;
+    padding:120px 20px;
+}
+
+form{
+    max-width:700px;
+    margin:auto;
+}
+
+input, textarea{
+    width:100%;
+    padding:15px;
+    margin-bottom:20px;
+    border-radius:8px;
+    border:none;
+    font-family:'Montserrat';
+}
+
+button{
+    padding:15px 40px;
+    background:#f59e0b;
+    border:none;
+    border-radius:8px;
+    font-weight:700;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#00c3ff;
+    color:#000;
 }
 
 /* Contact */
@@ -156,7 +188,6 @@ p{
     font-weight:600;
 }
 
-/* Footer */
 footer{
     padding:50px;
     text-align:center;
@@ -180,31 +211,18 @@ footer{
 
 <img src="precision-machine.jpeg"
      alt="Precision CNC Lathe Machine by Shree Engineering India"
-     title="Precision CNC Lathe Machine Manufacturer - Shree Engineering"
      class="main-machine"
      loading="lazy">
 
 <div class="nameplate">
 <img src="machine-nameplate.jpeg"
-     alt="CNC Machine Nameplate - Shree Engineering Precision Model"
-     title="Industrial CNC Machine Nameplate - Shree Engineering"
+     alt="CNC Machine Nameplate - Shree Engineering"
      loading="lazy">
 </div>
 
 <p>
 Our precision CNC lathe systems are engineered for structural rigidity,
 vibration stability, dimensional accuracy and long-term industrial reliability.
-Each machine platform is designed to support high-speed turning,
-threading, boring and drilling operations across demanding manufacturing environments.
-</p>
-</section>
-
-<section class="section">
-<h2>Engineering Architecture</h2>
-<p>
-Advanced casting alignment, spindle stabilization, CNC controller synchronization
-and mechanical load optimization ensure consistent repeatability and operational durability.
-Our engineering philosophy focuses on precision alignment and industrial robustness.
 </p>
 </section>
 
@@ -220,17 +238,27 @@ Our engineering philosophy focuses on precision alignment and industrial robustn
 </div>
 </section>
 
-<section class="section">
-<h2>Global Manufacturing Integration</h2>
-<p>
-Our CNC systems are developed to integrate seamlessly into global manufacturing
-workflows, supporting export-grade production standards and industrial expansion strategies.
-</p>
+<!-- FEEDBACK / ENQUIRY FORM -->
+<section class="form-section">
+<h2 style="text-align:center;">Send Your Enquiry / Feedback</h2>
+
+<form action="https://formsubmit.co/shreeengineering2020@gmail.com" method="POST">
+
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_subject" value="New Enquiry - Shree Engineering Website">
+
+<input type="text" name="name" placeholder="Your Name" required>
+<input type="email" name="email" placeholder="Your Email" required>
+<input type="text" name="company" placeholder="Company Name">
+<textarea name="message" rows="5" placeholder="Your Requirement / Feedback" required></textarea>
+
+<button type="submit">Send Enquiry</button>
+
+</form>
 </section>
 
 <section class="contact">
-<h2>Contact Shree Engineering</h2>
-<p>For industrial and export enquiries:</p>
+<h2>Direct Contact</h2>
 <p>
 <a href="mailto:shreeengineering2020@gmail.com">
 shreeengineering2020@gmail.com
@@ -244,6 +272,7 @@ shreeengineering2020@gmail.com
 
 </body>
 </html>
+
 
 
 
