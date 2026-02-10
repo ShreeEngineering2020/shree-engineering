@@ -7,13 +7,7 @@
 
 <title>Shree Engineering | Precision CNC Lathe Machine Manufacturer India</title>
 
-<meta name="description" content="Shree Engineering is a precision CNC Lathe Machine manufacturer in India offering high-accuracy turning and drilling solutions. Customisable industrial machinery for domestic and export markets.">
-<meta name="keywords" content="CNC Lathe Machine Manufacturer India, Precision CNC Machine, Turning Machine, Drilling Machine, Industrial CNC Exporter, Shree Engineering">
-<meta name="author" content="Shree Engineering">
-
-<meta property="og:title" content="Shree Engineering - Precision CNC Machine Manufacturer">
-<meta property="og:description" content="High precision CNC Lathe machines engineered for industrial performance and export markets.">
-<meta property="og:image" content="precision-machine.jpeg">
+<meta name="description" content="Shree Engineering is a precision CNC Lathe Machine manufacturer in India delivering high-accuracy turning and drilling solutions for domestic and export markets.">
 
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
@@ -28,46 +22,39 @@ body{
     overflow-x:hidden;
 }
 
-/* Futuristic Grid Background */
+/* Multicolour Mechanical Background */
 body::before{
     content:"";
     position:fixed;
     width:100%;
     height:100%;
     background:
-        linear-gradient(rgba(0,150,255,0.05) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0,150,255,0.05) 1px, transparent 1px);
-    background-size:60px 60px;
-    animation:gridMove 30s linear infinite;
+        radial-gradient(circle at 15% 20%, rgba(0,150,255,0.15), transparent 40%),
+        radial-gradient(circle at 85% 70%, rgba(255,140,0,0.15), transparent 40%),
+        radial-gradient(circle at 50% 90%, rgba(0,255,150,0.10), transparent 40%);
     z-index:-2;
 }
-@keyframes gridMove{
-    from{transform:translateY(0);}
-    to{transform:translateY(60px);}
-}
 
-/* Glow */
+/* Mechanical grid overlay */
 body::after{
     content:"";
     position:fixed;
     width:100%;
     height:100%;
-    background:
-        radial-gradient(circle at 20% 30%, rgba(0,150,255,0.15), transparent 40%),
-        radial-gradient(circle at 80% 70%, rgba(255,140,0,0.15), transparent 40%);
+    background-image:
+        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+    background-size:60px 60px;
     z-index:-1;
 }
 
 /* HERO */
 .hero{
-    height:90vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
+    padding:100px 20px;
     text-align:center;
     background:linear-gradient(to right,#0f172a,#1e293b);
-    border-bottom:1px solid rgba(0,150,255,0.2);
 }
+
 .hero h1{
     font-size:50px;
     letter-spacing:4px;
@@ -75,133 +62,117 @@ body::after{
     -webkit-background-clip:text;
     -webkit-text-fill-color:transparent;
 }
+
 .hero p{
     margin-top:20px;
-    font-size:18px;
     color:#94a3b8;
-}
-.btn{
-    display:inline-block;
-    margin-top:35px;
-    padding:14px 32px;
-    background:#f59e0b;
-    color:#000;
-    font-weight:600;
-    text-decoration:none;
-    border-radius:6px;
-    transition:0.3s;
-}
-.btn:hover{
-    background:#00c3ff;
-    color:#fff;
+    font-size:18px;
 }
 
-/* Section */
+/* MACHINE SECTION */
 .section{
     padding:100px 20px;
-    max-width:1200px;
+    max-width:1300px;
     margin:auto;
 }
 
-/* Machine Card */
-.machine-box{
+.machine-wrapper{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    justify-content:center;
+    gap:60px;
+}
+
+/* Image */
+.machine-img{
+    flex:1;
+    text-align:center;
+    perspective:1000px;
+}
+
+.machine-img img{
+    width:50%;
+    max-width:500px;
+    transition:transform 0.6s ease, box-shadow 0.6s ease;
+    border-radius:14px;
+    box-shadow:0 25px 50px rgba(0,0,0,0.6);
+}
+
+.machine-img img:hover{
+    transform:rotateY(8deg) rotateX(4deg) scale(1.03);
+    box-shadow:0 40px 80px rgba(0,150,255,0.4);
+}
+
+/* Specs Panel */
+.spec-panel{
+    flex:1;
     background:rgba(30,41,59,0.7);
     backdrop-filter:blur(15px);
+    padding:50px;
     border-radius:20px;
-    overflow:hidden;
-    border:1px solid rgba(0,150,255,0.2);
-    box-shadow:0 30px 60px rgba(0,0,0,0.6);
-    transition:0.4s ease;
+    border:1px solid rgba(0,150,255,0.3);
+    box-shadow:0 30px 60px rgba(0,0,0,0.5);
 }
-.machine-box:hover{
-    transform:translateY(-8px);
-    box-shadow:0 40px 80px rgba(0,150,255,0.3);
-}
-.machine-img img{
-    width:100%;
-    display:block;
-}
-.machine-content{
-    padding:60px;
-}
-.machine-content h2{
-    font-size:34px;
+
+.spec-panel h2{
+    margin-top:0;
+    font-size:32px;
     border-left:6px solid #f59e0b;
     padding-left:15px;
 }
-.machine-content p{
-    line-height:1.8;
-    color:#cbd5e1;
-}
-.specs{
+
+.spec-panel ul{
     margin-top:25px;
     padding-left:20px;
 }
-.specs li{
+
+.spec-panel li{
     margin-bottom:12px;
 }
 
-/* Stats */
-.stats{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:40px;
-    text-align:center;
-    padding:100px 20px;
-    background:#0f172a;
+/* Technical Table */
+.tech-table{
+    margin-top:30px;
+    width:100%;
+    border-collapse:collapse;
 }
-.stat h3{
-    font-size:36px;
-    color:#f59e0b;
+
+.tech-table td{
+    padding:12px;
+    border-bottom:1px solid rgba(255,255,255,0.1);
 }
-.stat p{
+
+.tech-table td:first-child{
     color:#94a3b8;
 }
 
-/* Why Section */
-.why{
+/* CONTACT */
+.contact{
     padding:100px 20px;
     text-align:center;
-}
-.why h2{
-    margin-bottom:50px;
-}
-.why-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:40px;
-    max-width:1100px;
-    margin:auto;
-}
-.why-grid h4{
-    color:#f59e0b;
+    background:#111827;
 }
 
-/* Contact */
-.contact{
-    background:#111827;
-    padding:100px 20px;
-    text-align:center;
-}
 .contact h2{
     margin-bottom:20px;
 }
+
 .contact a{
     color:#f59e0b;
-    font-weight:600;
-    text-decoration:none;
     font-size:18px;
+    text-decoration:none;
 }
+
 .contact a:hover{
     color:#00c3ff;
 }
 
-/* Footer */
+/* FOOTER */
 footer{
-    background:#0f172a;
     text-align:center;
     padding:25px;
-    font-size:14px;
+    background:#0f172a;
     color:#94a3b8;
 }
 
@@ -224,74 +195,52 @@ footer{
 <body>
 
 <section class="hero">
-    <div>
-        <h1>SHREE ENGINEERING</h1>
-        <p>Precision CNC Technology for Modern Manufacturing & Export Markets</p>
-        <a href="#contact" class="btn">Request Quotation</a>
-    </div>
+    <h1>SHREE ENGINEERING</h1>
+    <p>Precision CNC Technology for Modern Manufacturing & Export Markets</p>
 </section>
 
 <section class="section">
-    <div class="machine-box">
+    <div class="machine-wrapper">
+
         <div class="machine-img">
             <img src="precision-machine.jpeg" alt="Precision CNC Lathe Machine">
         </div>
 
-        <div class="machine-content">
+        <div class="spec-panel">
             <h2>Precision CNC Lathe Machine</h2>
-            <p>
-                Engineered for micron-level accuracy and high-performance turning 
-                and drilling operations. Designed for reliability, industrial durability 
-                and customisable manufacturing requirements.
-            </p>
-            <ul class="specs">
+
+            <ul>
                 <li>High Accuracy Turning Operations</li>
                 <li>Advanced Drilling Capability</li>
                 <li>Heavy Duty Industrial Structure</li>
                 <li>Fully Customisable Configurations</li>
             </ul>
+
+            <table class="tech-table">
+                <tr>
+                    <td>Accuracy</td>
+                    <td>±0.01 mm</td>
+                </tr>
+                <tr>
+                    <td>Operation</td>
+                    <td>24/7 Industrial Use</td>
+                </tr>
+                <tr>
+                    <td>Control System</td>
+                    <td>Advanced CNC</td>
+                </tr>
+                <tr>
+                    <td>Customisation</td>
+                    <td>Available</td>
+                </tr>
+            </table>
+
         </div>
+
     </div>
 </section>
 
-<section class="stats">
-    <div class="stat">
-        <h3>±0.01mm</h3>
-        <p>Machining Accuracy</p>
-    </div>
-    <div class="stat">
-        <h3>24/7</h3>
-        <p>Production Ready</p>
-    </div>
-    <div class="stat">
-        <h3>100%</h3>
-        <p>Custom Engineering</p>
-    </div>
-    <div class="stat">
-        <h3>Export</h3>
-        <p>Global Supply Capability</p>
-    </div>
-</section>
-
-<section class="why">
-    <h2>Why Choose Shree Engineering</h2>
-    <div class="why-grid">
-        <div>
-            <h4>Industrial Grade Build</h4>
-            <p>Heavy duty construction ensuring long life and vibration-free performance.</p>
-        </div>
-        <div>
-            <h4>Advanced CNC Control</h4>
-            <p>Modern automation systems delivering precision and efficiency.</p>
-        </div>
-        <div>
-            <h4>Custom Engineering</h4>
-            <p>Machines tailored specifically for your manufacturing application.</p>
-        </div>
-    </div>
-</section>
-
-<section id="contact" class="contact">
+<section class="contact">
     <h2>Contact Shree Engineering</h2>
     <p>Email us for machine enquiries:</p>
     <p>
@@ -309,9 +258,3 @@ Shree Engineering | Precision CNC Machine Manufacturer | India
 
 </body>
 </html>
-
-
-
-
-
-
