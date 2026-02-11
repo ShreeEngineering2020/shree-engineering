@@ -21,7 +21,7 @@ body{
     overflow-x:hidden;
 }
 
-/* Background Blueprint */
+/* Blueprint Background */
 body::before{
     content:"";
     position:fixed;
@@ -79,21 +79,29 @@ p{
     color:#cbd5e1;
 }
 
-/* Machine */
-.machine{text-align:center;position:relative;}
+/* Machine Section */
+.machine{
+    text-align:center;
+    position:relative;
+}
+
 .machine img.main-machine{
     width:35%;
     border-radius:18px;
     transition:0.5s;
 }
+
 .machine img.main-machine:hover{
-    transform:rotateY(6deg) scale(1.05);
+    transform:scale(1.05);
 }
+
+/* Nameplate */
 .nameplate{
     position:absolute;
     right:5%;
     bottom:-40px;
 }
+
 .nameplate img{
     width:120px;
 }
@@ -104,6 +112,7 @@ p{
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
     gap:30px;
 }
+
 .card{
     background:#0f172a;
     padding:30px;
@@ -111,7 +120,7 @@ p{
     border:1px solid rgba(0,150,255,0.2);
 }
 
-/* Form */
+/* Form Section */
 .form-section{
     background:#0f172a;
     padding:120px 20px;
@@ -178,6 +187,7 @@ button:hover{
     text-decoration:none;
     font-weight:600;
 }
+
 footer{
     padding:50px;
     text-align:center;
@@ -189,6 +199,7 @@ footer{
 
 <body>
 
+<!-- HERO -->
 <section class="hero">
 <div>
 <h1>SHREE ENGINEERING</h1>
@@ -196,6 +207,7 @@ footer{
 </div>
 </section>
 
+<!-- FIRST MACHINE -->
 <section class="section machine">
 <h2>Precision CNC Lathe Machine</h2>
 
@@ -216,6 +228,29 @@ vibration stability and industrial reliability.
 </p>
 </section>
 
+<!-- SECOND MACHINE - ALLEN R50 -->
+<section class="section machine">
+<h2>ALLEN R50 CNC Lathe Machine</h2>
+
+<img src="allen-r50-machine.jpeg"
+     alt="ALLEN R50 CNC Lathe Machine"
+     class="main-machine"
+     loading="lazy">
+
+<div class="nameplate">
+<img src="allen-r50-nameplate.jpeg"
+     alt="ALLEN R50 CNC Machine Nameplate"
+     loading="lazy">
+</div>
+
+<p>
+The ALLEN R50 CNC Lathe Machine is built for high-precision industrial turning applications.
+Designed for heavy-duty production environments, this model delivers stable spindle performance,
+accurate machining and long operational lifespan.
+</p>
+</section>
+
+<!-- CAPABILITIES -->
 <section class="section">
 <h2>Industrial Capabilities</h2>
 <div class="grid">
@@ -232,9 +267,7 @@ vibration stability and industrial reliability.
 <section class="form-section">
 <h2 style="text-align:center;">Send Your Enquiry / Feedback</h2>
 
-<form id="enquiryForm"
-action="https://formsubmit.co/shreeengineering2020@gmail.com"
-method="POST">
+<form action="https://formsubmit.co/shreeengineering2020@gmail.com" method="POST">
 
 <input type="hidden" name="_captcha" value="false">
 <input type="hidden" name="_subject" value="New Enquiry - Shree Engineering">
@@ -250,6 +283,7 @@ method="POST">
 </form>
 </section>
 
+<!-- CONTACT -->
 <section class="contact">
 <h2>Direct Contact</h2>
 <p>
@@ -272,7 +306,6 @@ shreeengineering2020@gmail.com
 </div>
 
 <script>
-// Show popup after redirect
 if(window.location.search.includes("submitted=true")){
     document.getElementById("thankYouPopup").style.display="flex";
     setTimeout(function(){
@@ -283,6 +316,7 @@ if(window.location.search.includes("submitted=true")){
 
 </body>
 </html>
+
 
 
 
